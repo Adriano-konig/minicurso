@@ -12,6 +12,7 @@ const nomeDoPersonagemC = document.querySelector('#nomeC');
 const especieC = document.querySelector('#especieC');
 const condicaoC = document.querySelector('#statusC');
 
+
 traduzirCondicao = (data) => {
     if(data.status == 'unknown'){
         return 'Não sabemos';
@@ -21,10 +22,11 @@ traduzirCondicao = (data) => {
         return 'Não. Está morto';
     }
 }
+
 traduzirCondicaoB = (dataB) => {
-    if(dataB.statusB == 'unknown'){
+    if(dataB.status == 'unknown'){
         return 'Não sabemos';
-    }else if(dataB.statusB == 'Alive'){
+    }else if(dataB.status == 'Alive'){
         return 'Sim';
     }else {
         return 'Não. Está morto';
@@ -32,9 +34,9 @@ traduzirCondicaoB = (dataB) => {
 }
 
 traduzirCondicaoC = (dataC) => {
-    if(dataC.statusC == 'unknown'){
+    if(dataC.status == 'unknown'){
         return 'Não sabemos';
-    }else if(dataC.statusC == 'Alive'){
+    }else if(dataC.status == 'Alive'){
         return 'Sim';
     }else {
         return 'Não. Está morto';
@@ -85,7 +87,7 @@ pegarPersonagem = () => {
     }).then((response) => response.json()).then((dataC) => {    
         imagemC.src = dataC.image;
         imagemC.alt = dataC.name;
-        nomeDoPersonagemC.innerHTML = data.name;
+        nomeDoPersonagemC.innerHTML = dataC.name;
         especieC.innerHTML = dataC.species;
         condicaoC.innerHTML = traduzirCondicaoC(dataC);   
     });
