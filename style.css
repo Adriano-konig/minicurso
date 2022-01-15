@@ -15,7 +15,7 @@ body{
 main{
     align-items: center;
     display: flex;
-    height: 100vh;
+    height: 250vh;
     justify-content: center;
     position: relative;
 }
@@ -39,19 +39,53 @@ main > section button {
     text-transform: uppercase;
     padding: 9px 23px;
 }
-#detalhes-container {
+#detalhes-container-a {
     font-weight: bold;
     list-style-type: none;
     width: 90%;
 }
 
-#detalhes-container > li {
+#detalhes-container-a > li {
     align-items: baseline;
     display: flex;
 }
 
 
-#detalhes-container > li p {
+#detalhes-container-a > li p {
+    color: white;
+
+}
+
+#detalhes-container-b {
+    font-weight: bold;
+    list-style-type: none;
+    width: 90%;
+}
+
+#detalhes-container-b > li {
+    align-items: baseline;
+    display: flex;
+}
+
+
+#detalhes-container-b > li p {
+    color: white;
+
+}
+
+#detalhes-container-c {
+    font-weight: bold;
+    list-style-type: none;
+    width: 90%;
+}
+
+#detalhes-container-c > li {
+    align-items: baseline;
+    display: flex;
+}
+
+
+#detalhes-container-c > li p {
     color: white;
 
 }
